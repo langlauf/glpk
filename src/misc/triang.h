@@ -1,4 +1,4 @@
-/* triang.h */
+/* triang.h (find maximal triangular part of rectangular matrix) */
 
 /***********************************************************************
 *  This code is part of GLPK (GNU Linear Programming Kit).
