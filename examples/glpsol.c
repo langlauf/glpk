@@ -2,10 +2,8 @@
 
 /***********************************************************************
 *  This code is part of GLPK (GNU Linear Programming Kit).
-*
-*  Copyright (C) 2000-2017 Andrew Makhorin, Department for Applied
-*  Informatics, Moscow Aviation Institute, Moscow, Russia. All rights
-*  reserved. E-mail: <mao@gnu.org>.
+*  Copyright (C) 2000-2020 Free Software Foundation, Inc.
+*  Written by Andrew Makhorin <mao@gnu.org>.
 *
 *  GLPK is free software: you can redistribute it and/or modify it
 *  under the terms of the GNU General Public License as published by
@@ -432,13 +430,10 @@ static void print_help(const char *my_name)
 
 static void print_version(int briefly)
 {     /* print version information */
-      xprintf("GLPSOL: GLPK LP/MIP Solver, v%s\n", glp_version());
+      xprintf("GLPSOL--GLPK LP/MIP Solver %s\n", glp_version());
       if (briefly) goto done;
-      xprintf("Copyright (C) 2000-2017 Andrew Makhorin, Department for "
-         "Applied\n");
-      xprintf("Informatics, Moscow Aviation Institute, Moscow, Russia. "
-         "All rights\n");
-      xprintf("reserved. E-mail: <mao@gnu.org>.\n");
+      xprintf("Copyright (C) 2000-2020 Free Software Foundation, Inc.\n"
+         );
       xprintf("\n");
       xprintf("This program has ABSOLUTELY NO WARRANTY.\n");
       xprintf("\n");

@@ -1,12 +1,9 @@
-/* glprgr.c */
+/* rgr.c (raster graphics) */
 
 /***********************************************************************
 *  This code is part of GLPK (GNU Linear Programming Kit).
-*
-*  Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
-*  2009, 2010, 2011, 2013, 2017 Andrew Makhorin, Department for Applied
-*  Informatics, Moscow Aviation Institute, Moscow, Russia. All rights
-*  reserved. E-mail: <mao@gnu.org>.
+*  Copyright (C) 2004-2018 Free Software Foundation, Inc.
+*  Written by Andrew Makhorin <mao@gnu.org>.
 *
 *  GLPK is free software: you can redistribute it and/or modify it
 *  under the terms of the GNU General Public License as published by
@@ -22,11 +19,8 @@
 *  along with GLPK. If not, see <http://www.gnu.org/licenses/>.
 ***********************************************************************/
 
-#define _GLPSTD_ERRNO
-#define _GLPSTD_STDIO
 #include "env.h"
-#include "glprgr.h"
-#define xfault xerror
+#include "rgr.h"
 
 /***********************************************************************
 *  NAME
@@ -35,7 +29,7 @@
 *
 *  SYNOPSIS
 *
-*  #include "glprgr.h"
+*  #include "rgr.h"
 *  int rgr_write_bmp16(const char *fname, int m, int n, const char
 *     map[]);
 *
@@ -95,9 +89,9 @@ int rgr_write_bmp16(const char *fname, int m, int n, const char map[])
 {     FILE *fp;
       int offset, bmsize, i, j, b, ret = 0;
       if (!(1 <= m && m <= 32767))
-         xfault("rgr_write_bmp16: m = %d; invalid height\n", m);
+         xerror("rgr_write_bmp16: m = %d; invalid height\n", m);
       if (!(1 <= n && n <= 32767))
-         xfault("rgr_write_bmp16: n = %d; invalid width\n", n);
+         xerror("rgr_write_bmp16: n = %d; invalid width\n", n);
       fp = fopen(fname, "wb");
       if (fp == NULL)
       {  xprintf("rgr_write_bmp16: unable to create '%s' - %s\n",

@@ -1,3 +1,22 @@
+GLPK 5.0 (release date: Dec 16, 2020)
+
+        The copyright was transferred to the Free Software Foundation.
+
+        To fix some licensing problems the routines in the following
+        files were disabled by replacing with dummy ones that print an
+        error message:
+
+        src/api/gridgen.c
+        src/api/netgen.c
+        src/api/rmfgen.c
+        src/misc/qmd.c
+        src/misc/relax4.c
+
+        Note that this change does not affect the main faunctionality
+        of the package.
+
+        Some minor bugs were fixed.
+
 GLPK 4.65 (release date: Feb 16, 2018)
 
         The following new API routines for LP/MIP preprocessing were

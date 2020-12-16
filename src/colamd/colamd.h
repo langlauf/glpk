@@ -5,7 +5,6 @@
 #ifndef COLAMD_H
 #define COLAMD_H
 
-#define _GLPSTD_STDIO
 #include "env.h"
 
 #define COLAMD_DATE "Nov 1, 2007"

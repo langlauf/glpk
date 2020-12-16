@@ -112,7 +112,6 @@ OBJSET = \
 ..\src\draft\glpapi10.obj \
 ..\src\draft\glpapi12.obj \
 ..\src\draft\glpapi13.obj \
-..\src\draft\glphbm.obj \
 ..\src\draft\glpios01.obj \
 ..\src\draft\glpios02.obj \
 ..\src\draft\glpios03.obj \
@@ -122,9 +121,7 @@ OBJSET = \
 ..\src\draft\glpios12.obj \
 ..\src\draft\glpipm.obj \
 ..\src\draft\glpmat.obj \
-..\src\draft\glprgr.obj \
 ..\src\draft\glpscl.obj \
-..\src\draft\glpspm.obj \
 ..\src\draft\glpssx01.obj \
 ..\src\draft\glpssx02.obj \
 ..\src\draft\lux.obj \
@@ -156,6 +153,7 @@ OBJSET = \
 ..\src\misc\fp2rat.obj \
 ..\src\misc\fvs.obj \
 ..\src\misc\gcd.obj \
+..\src\misc\hbm.obj \
 ..\src\misc\jd.obj \
 ..\src\misc\keller.obj \
 ..\src\misc\ks.obj \
@@ -166,9 +164,11 @@ OBJSET = \
 ..\src\misc\okalg.obj \
 ..\src\misc\qmd.obj \
 ..\src\misc\relax4.obj \
+..\src\misc\rgr.obj \
 ..\src\misc\rng.obj \
 ..\src\misc\rng1.obj \
 ..\src\misc\round2n.obj \
+..\src\misc\spm.obj \
 ..\src\misc\str2int.obj \
 ..\src\misc\str2num.obj \
 ..\src\misc\strspx.obj \
@@ -220,10 +220,10 @@ OBJSET = \
 .c.obj:
         cl.exe $(CFLAGS) /Fo$*.obj /c $*.c
 
-all: glpk_4_65.dll glpsol.exe
+all: glpk_5_0.dll glpsol.exe
 
-glpk_4_65.dll: $(OBJSET)
-        cl.exe $(CFLAGS) /LD /Feglpk_4_65.dll \
+glpk_5_0.dll: $(OBJSET)
+        cl.exe $(CFLAGS) /LD /Feglpk_5_0.dll \
                 ..\src\*.obj \
                 ..\src\amd\*.obj \
                 ..\src\api\*.obj \
@@ -239,11 +239,11 @@ glpk_4_65.dll: $(OBJSET)
                 ..\src\proxy\*.obj \
                 ..\src\simplex\*.obj \
                 ..\src\zlib\*.obj \
-                glpk_4_65.def
+                glpk_5_0.def
 
-glpsol.exe: ..\examples\glpsol.obj glpk_4_65.dll
+glpsol.exe: ..\examples\glpsol.obj glpk_5_0.dll
         cl.exe $(CFLAGS) /Feglpsol.exe \
-                ..\examples\glpsol.obj glpk_4_65.lib
+                ..\examples\glpsol.obj glpk_5_0.lib
 
 check: glpsol.exe
         .\glpsol.exe --version

@@ -2,12 +2,8 @@
 
 /***********************************************************************
 *  This code is part of GLPK (GNU Linear Programming Kit).
-*
-*  Author: Heinrich Schuchardt <heinrich.schuchardt@gmx.de>.
-*
-*  Copyright (C) 2003-2016 Andrew Makhorin, Department for Applied
-*  Informatics, Moscow Aviation Institute, Moscow, Russia. All rights
-*  reserved. E-mail: <mao@gnu.org>.
+*  Copyright (C) 2003-2016 Free Software Foundation, Inc.
+*  Written by Heinrich Schuchardt <xypron.glpk@gmx.de>.
 *
 *  GLPK is free software: you can redistribute it and/or modify it
 *  under the terms of the GNU General Public License as published by

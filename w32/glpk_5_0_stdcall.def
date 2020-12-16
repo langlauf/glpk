@@ -1,5 +1,5 @@
-LIBRARY glpk_4_65
-VERSION 4.65
+LIBRARY glpk_5_0_stdcall
+VERSION 5.0
 DESCRIPTION "GNU Linear Programming Kit"
 EXPORTS
 glp_create_prob

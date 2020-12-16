@@ -1,3 +1,31 @@
+Wed Dec 16 10:00:00 2020 Andrew Makhorin <mao@gnu.org>
+
+        * GLPK 5.0 (43:1:3) has been released.
+
+        The copyright was transferred to the Free Software Foundation.
+
+        To fix some licensing problems the routines in the following
+        files were disabled by replacing with dummy ones that print an
+        error message:
+        * src/api/gridgen.c
+        * src/api/netgen.c
+        * src/api/rmfgen.c
+        * src/misc/qmd.c
+        * src/misc/relax4.c
+        Note that this change does not affect the main faunctionality
+        of the package.
+
+        *src/draft/glpios01.c:1395
+        A bug was fixed for the case n = 0.
+
+        The following modules were renamed to simplify maintenance.
+        * src/draft/glphbm.h   RENAMED -> src/misc/hbm.h
+        * src/draft/glphbm.c   RENAMED -> src/misc/hbm.c
+        * src/draft/glprgr.h   RENAMED -> src/misc/rgr.h
+        * src/draft/glprgr.c   RENAMED -> src/misc/rgr.c
+        * src/draft/glpspm.h   RENAMED -> src/misc/spm.h
+        * src/draft/glpspm.c   RENAMED -> src/misc/spm.c
+
 Thu Feb 16 10:00:00 2018 Andrew Makhorin <mao@gnu.org>
 
         * GLPK 4.65 (43:0:3) has been released.

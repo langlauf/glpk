@@ -11,7 +11,6 @@
 #endif
 
 #include "amd.h"
-#define _GLPSTD_STDIO
 #include "env.h"
 
 #define Int int

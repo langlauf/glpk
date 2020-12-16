@@ -1,12 +1,9 @@
-/* glphbm.c */
+/* hbm.c (Harwell-Boeing sparse matrix format) */
 
 /***********************************************************************
 *  This code is part of GLPK (GNU Linear Programming Kit).
-*
-*  Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
-*  2009, 2010, 2011, 2013, 2017 Andrew Makhorin, Department for Applied
-*  Informatics, Moscow Aviation Institute, Moscow, Russia. All rights
-*  reserved. E-mail: <mao@gnu.org>.
+*  Copyright (C) 2004-2018 Free Software Foundation, Inc.
+*  Written by Andrew Makhorin <mao@gnu.org>.
 *
 *  GLPK is free software: you can redistribute it and/or modify it
 *  under the terms of the GNU General Public License as published by
@@ -23,7 +20,7 @@
 ***********************************************************************/
 
 #include "env.h"
-#include "glphbm.h"
+#include "hbm.h"
 #include "misc.h"
 
 /***********************************************************************

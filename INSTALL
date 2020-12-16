@@ -6,7 +6,7 @@ Unpacking the distribution file
 The GLPK package (like all other GNU software) is distributed in the
 form of a packed archive. It is one file named `glpk-X.Y.tar.gz', where
 `X' is the major version number and `Y' is the minor version number;
-for example, the archive name might be `glpk-4.15.tar.gz'.
+for example, the archive name might be `glpk-5.0.tar.gz'.
 
 In order to prepare the distribution for installation you should:
 
